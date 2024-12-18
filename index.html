@@ -14,12 +14,13 @@
             <h1>RN Wave</h1>
         </div>
     </header>
-    <nav>
-        <a href="RN Home.html">Home</a>
-        <a href="RN Order.html">Order</a>
-        <a href="RN About.html">About Us</a>
-        <a href="RN Contact.html">Contact</a>
-    </nav>
+<nav>
+    <a href="RN Home.html">Home</a>
+    <a href="RN Order.html">Order</a>
+    <a href="RN About.html">About Us</a>
+    <a href="RN Contact.html">Contact</a>
+</nav>
+
     <div class="container">
         <h2>Dinner Wears</h2>
         <div class="categories">
@@ -47,10 +48,10 @@
         </div>
     </div>
     <div class="container">
-        <h2>Bridals</h2>
+        <h3>Bridals</h3>
         <div class="categories">
             <div class="category">
-                <img src="B1.jpg" alt="Bridal Wear">
+                <img src="B1.jpg" alt="Bridals">
                 <h3>Bridals</h3>
                 <button onclick="orderOutfit('Bridal Wear')">Order</button>
             </div>
@@ -133,12 +134,25 @@
     <footer>
         <p>&copy; 2024 RN Wave. All rights reserved.</p>
     </footer>
+    
     <script>
+        // Highlight the link of the current page
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("nav a");
+            const currentPage = window.location.pathname.split('/').pop();
+
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
         function orderOutfit(outfit) {
             const name = prompt("Enter your name:");
             if (name) {
                 const message = `This ${outfit} has been ordered by the client ${name}.`;
-                const whatsappUrl = `https://wa.me/+233257377761?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/0257377761?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
             }
         }
@@ -158,6 +172,6 @@
             }
         }
     </script>
-</body>
-
-</html>
+    </body>
+    
+    </html>
