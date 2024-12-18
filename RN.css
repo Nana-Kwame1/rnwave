@@ -88,7 +88,10 @@ nav a:hover {
     padding: 10px;
     
 }
-
+@media (max-width: 480px) {
+    .categories {
+        justify-content: space-around;
+    }
 .category img {
     width: 20vw;
     height: 40vw;
