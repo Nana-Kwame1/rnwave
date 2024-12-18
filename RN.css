@@ -157,3 +157,33 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.text {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    color: purple;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid pink;
+}
+
+.text h3 {
+    font-size: 2rem;
+    color: purple;
+    margin-bottom: 15px;
+}
+
+.text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.text:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
