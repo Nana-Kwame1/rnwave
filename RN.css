@@ -101,12 +101,7 @@ nav a:hover {
         width: 100%;
         height: auto;
     }
-}
-.category img {
-    width: 20vw;
-    height: 40vw;
-    border-radius: 5px;
-}
+
 
 .category button {
     margin-top: 10px;
