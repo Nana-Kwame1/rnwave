@@ -86,13 +86,15 @@ nav a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    
+    text-align: center;
 }
+
 .category img {
     width: 20vw;
     height: 40vw;
     border-radius: 5px;
 }
+
 .category button {
     margin-top: 10px;
     padding: 10px;
@@ -109,13 +111,17 @@ footer {
     text-align: center;
     padding: 10px;
 }
+ .container button {
+     background-color: purple;
+     margin-bottom: 5px;
+ }
 
 .comment-section {
     margin-top: 20px;
 }
 
 .comment-section textarea {
-    width: 100%;
+    width: 99%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -145,4 +151,3 @@ footer {
     font-size: x-large;
     font-weight: 400px;
 }
-  
