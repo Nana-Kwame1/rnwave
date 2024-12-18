@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - RN WAVE CLOTHINGS</title>
+    <link rel="stylesheet" href="RN.css">
+        <script src="script.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+    <h2>Dinner Wears</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="D1.jpg" alt="Dinner Wear">
+            <h3>Dinner Wear</h3>
+            <button onclick="orderOutfit('Dinner Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="D2.jpg" alt="Dinner Wear">
+            <h3>Dinner Wear</h3>
+            <button onclick="orderOutfit('Dinner Wear')">Order</button>
+        </div>
+
+        <div class="category">
+            <img src="D3.jpg" alt="Kaftan">
+            <h3>Dinner Wear</h3>
+            <button onclick="orderOutfit('Dinner Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="D6.jpg" alt="Dinner Wear">
+            <h3>Dinner Wear</h3>
+            <button onclick="orderOutfit('Church Dress')">Order</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Bridals</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="B1.jpg" alt="Bridal Wear">
+            <h3></h3>
+            <button onclick="orderOutfit('Bridal Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="B2.jpg" alt="Bridals">
+            <h3></h3>
+            <button onclick="orderOutfit('Bridals')">Order</button>
+        </div>
+
+        <div class="category">
+            <img src="B3.jpg" alt="Bridals">
+            <h3></h3>
+            <button onclick="orderOutfit('Kaftan')">Order</button>
+        </div>
+        <div class="category">
+            <img src="B4.jpg" alt="Bridals">
+            <h3>s</h3>
+            <button onclick="orderOutfit('Church Dress')">Order</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Church Outfits</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="C1.jpg" alt="Church Wear">
+            <h3>Church Wear</h3>
+            <button onclick="orderOutfit('Church Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="C2.jpg" alt="Church Wear">
+            <h3>Church Wear</h3>
+            <button onclick="orderOutfit('Church Wears')">Order</button>
+        </div>
+
+        <div class="category">
+            <img src="C3.jpg" alt="Kaftan">
+            <h3>Church Wear</h3>
+            <button onclick="orderOutfit('Church Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="C4.jpg" alt="Church Wear">
+            <h3>Church Wear</h3>
+            <button onclick="orderOutfit('Church Dress')">Order</button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>Beach Wear</h2>
+    <div class="categories">
+        <div class="category">
+            <img src="BW1.jpg" alt="Beach Wear">
+            <h3>Beach Wear</h3>
+            <button onclick="orderOutfit('Beach Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="BW2.jpg" alt="Beach Wear">
+            <h3>Beach Wear</h3>
+            <button onclick="orderOutfit('Beach Wear')">Order</button>
+        </div>
+
+        <div class="category">
+            <img src="BW3.jpg" alt="Kaftan">
+            <h3>Beach Wear</h3>
+            <button onclick="orderOutfit('Beach Wear')">Order</button>
+        </div>
+        <div class="category">
+            <img src="BW4.jpg" alt="Beach Wear">
+            <h3>Beach Wear</h3>
+            <button onclick="orderOutfit('Beach Wear')">Order</button>
+        </div>
+    </div>
+</div>
+<div class="container comment-section">
+    <h2>Leave a Comment</h2>
+    <textarea id="comment" placeholder="Write your comment here..."></textarea>
+    <button onclick="postComment()">Post Comment</button>
+    <div id="comments" class="comments"></div>
+</div>
+    <script>
+        function orderOutfit(outfit) {
+            const name = prompt("Enter your name:");
+            if (name) {
+                const message = `This ${outfit} has been ordered by the client ${name}.`;
+                const whatsappUrl = `https://wa.me/0257377761?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            }
+        }
+
+        function postComment() {
+            const commentBox = document.getElementById('comment');
+            const comment = commentBox.value;
+            if (comment.trim()) {
+                const commentSection = document.getElementById('comments');
+                const commentDiv = document.createElement('div');
+                commentDiv.textContent = comment;
+                commentDiv.classList.add('comment');
+                commentSection.appendChild(commentDiv);
+                commentBox.value = '';
+            } else {
+                alert('Please write a comment before posting.');
+            }
+        }
+    </script>
+<script src="RN.js"></script>
+    <footer>
+        <div class="container">
+            <button onclick="goBack()">Go Back</button>
+            <p>&copy; 2024 RN WAVE. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

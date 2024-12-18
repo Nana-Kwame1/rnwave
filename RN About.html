@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Internal CSS -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: pink;
+            color: purple;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        /* Main Content */
+        .about-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: purple;
+            font-size: 1.8rem;
+        }
+
+        .about-container p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .team-section {
+            margin-top: 30px;
+        }
+
+        .team-section h3 {
+            color: purple;
+            margin-bottom: 10px;
+        }
+
+        .team-member {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member div {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: pink;
+            color: purple;
+            padding: 10px 0;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <!-- Main Content -->
+    <section class="about-container">
+        <h2>Welcome to RN WAVE CLOTHINGS</h2>
+        <p>
+            RN WAVE CLOTHINGS is your trusted seamstress for all occasions. From beautiful wedding dresses to stylish
+            casual wear, we specialize in designing and creating outfits tailored to perfection.
+        </p>
+        <p>
+            Our goal is to provide high-quality clothing that reflects your personality and style. With years of
+            experience, attention to detail, and passion for fashion, we ensure that every stitch counts.
+        </p>
+
+        <!-- Our Team -->
+        <div class="team-section">
+            <h3>Meet Our Team</h3>
+
+            <div class="team-member">
+                <img src="nana.jpg" alt="Nana Kwame Ansu Amankwah">
+                <div>
+                    <strong>Nana Kwame Ansu Amankwah</strong><br>
+                    Founder & Lead Designer
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="Jen.jpg" alt="John Smith">
+                <div>
+                    <strong>Rophina Okine</strong><br>
+                    Tailoring Specialist
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="gen.jpg" alt="Sarah Brown">
+                <div>
+                    <strong>Jennifer Benneh</strong><br>
+                    Customer Relations Manager
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="RN.js"></script>
+    <footer>
+        <div class="container">
+            <button onclick="goBack()">Go Back</button>
+            <p>&copy; 2024 RN WAVE. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

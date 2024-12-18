@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - RN WAVE CLOTHINGS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: pink;
+            color: purple;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: purple;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: pink;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: pink;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: pink;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color:pink;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer button {
+            background-color: purple;
+            margin-bottom: 5px;
+        }
+
+        footer button:hover {
+            background-color: #e68900;
+        }
+
+        /* Response styling */
+        #response {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        // JavaScript function to navigate back
+        function goBack() {
+            window.history.back();
+        }
+
+        // JavaScript function to handle form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Get user inputs
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const responseDiv = document.getElementById('response');
+
+            // Validate inputs
+            if (!name || !email || !message) {
+                responseDiv.style.color = 'red';
+                responseDiv.textContent = "Please fill out all fields!";
+                return;
+            }
+
+            // Generate a success message
+            const response = `Thank you, ${name}! Your message has been sent successfully.`;
+            responseDiv.style.color = 'green';
+            responseDiv.textContent = response;
+
+            // Clear the form fields
+            document.getElementById('contact-form').reset();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>RN WAVE CLOTHINGS</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content">
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response"></div> <!-- Response Display -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <button onclick="goBack()">Go Back</button>
+            <p>&copy; 2024 RN WAVE. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
